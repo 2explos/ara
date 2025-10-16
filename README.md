@@ -21,3 +21,8 @@ No server required.
 
 ## License
 MIT
+
+## Roadmap
+- [ ] Pagination (Next/Prev 10 txs)
+- [ ] CSV export
+- [ ] Base Sepolia switch
