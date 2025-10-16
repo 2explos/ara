@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Base Chain Explorer (lite)</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 32px; max-width: 900px; }
+    h1 { margin: 0 0 8px; }
+    .card { border: 1px solid #333; border-radius: 12px; padding: 16px; margin: 16px 0; }
+    .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    input { padding: 10px; border-radius: 8px; border: 1px solid #999; min-width: 360px; }
+    button { padding: 10px 14px; border-radius: 8px; border: 1px solid #333; cursor: pointer; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { text-align: left; border-bottom: 1px solid #333; padding: 8px 4px; font-size: 14px; }
+    code { background: #111; padding: 2px 6px; border-radius: 6px; }
+    .muted { color: #aaa; font-size: 12px; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+  </style>
+</head>
+<body>
+  <h1>Base Chain Explorer (lite)</h1>
+  <p class="muted">Quick read-only tools for <b>Base Mainnet</b> (no API key).</p>
+
+  <div class="card">
+    <div class="row">
+      <button id="btn-latest">Get latest block</button>
+      <button id="btn-gas">Get gas price</button>
+      <span id="network-info" class="muted"></span>
+    </div>
+    <div id="latest-out" class="mono"></div>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <input id="addr" placeholder="0x... address (Base)" />
+      <button id="btn-balance">Get balance</button>
+      <button id="btn-txs">Get last 10 txs</button>
+    </div>
+    <div id="balance-out" class="mono"></div>
+    <div id="txs-out"></div>
+  </div>
+
+  <!-- Ethers v6 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.9.0/dist/ethers.umd.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
