@@ -1,37 +1,23 @@
-# Ara
+# Base Chain Explorer (lite)
 
-**Ara** is a small experimental project to explore Web3 tools, smart contracts, and Farcaster miniapps.  
-This repository will document experiments, guides, and tests related to decentralized apps on Base and other EVM chains.
+Tiny, no-build explorer for **Base Mainnet**:
+- Latest block & gas price (RPC)
+- Address balance (RPC)
+- Last 10 transactions of an address (Blockscout API – no key)
 
----
+## Run (static)
+Open `index.html` locally, or host on GitHub Pages / Vercel / Netlify.  
+No server required.
 
-## 🧠 Current Focus
-- Learning Solidity & verifying smart contracts on Base
-- Building and deploying Farcaster miniapps
-- Integrating onchain actions (transactions, votes, etc.)
+## Tech
+- Ethers v6 (CDN)
+- RPC: `https://mainnet.base.org`
+- Tx list: `https://base.blockscout.com/api?module=account&action=txlist&...`
 
----
+## Notes
+- Read-only; no private keys used
+- CORS is allowed by Blockscout API at the time of writing
+- Feel free to submit PRs (pagination, ENS, CSV export, etc.)
 
-## 🛠️ Stack
-- **Next.js + TypeScript**
-- **Base (L2)**
-- **Farcaster SDK**
-- **Vercel**
-
----
-
-## 📦 Future Ideas
-- Onchain poll miniapp
-- Wallet analytics miniapp
-- Transaction visualizer on Base
-
----
-
-## 🤝 Contribute
-Feel free to fork this repo and suggest improvements!  
-You can also open issues with new ideas or questions.
-
----
-
-## 📜 License
+## License
 MIT
