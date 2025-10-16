@@ -1,3 +1,5 @@
+// TODO: add pagination & CSV export (see Issues #1 and #2)
+
 /* Base Chain Explorer (lite)
  * Read-only helpers: latest block, gas price, balance, tx list
  * RPC: Base mainnet; Tx list: Blockscout public API (no key)
